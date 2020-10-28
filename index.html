@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="iwata homepage">
+  <meta name="keywords" content="iwata,iwatachan,いわた,いわたちゃん,ishowta,いしょた">
+  <meta name="author" content="iwata">
+  <meta http-equiv="content-language" content="ja">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>ishowta</title>
+
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js" defer></script>
+  <script src="./js/gifworld.js" type="text/javascript" charset="utf-8" defer></script>
+  <script defer>
+    document.ondragstart = function () { return false; };
+  </script>
+</head>
+
+<body onLoad='document.getElementById("main").style.visibility="visible"'>
+  <center role="main" id="main" style="visibility:hidden">
+    <fieldset>
+      <img class="icon" width="40%" src="./image/icon.webp" alt="icon"></img><br>
+
+      <a target="_blank" rel="noopener" href="mailto:ishowta@gmail.com"><img class="logo" src="./image/logo/email.png"
+          alt="email" /></a>
+      <a target="_blank" rel="noopener" href="https://github.com/ishowta"><img class="logo"
+          src="./image/logo/github.png" alt="github" /></a>
+      <a target="_blank" rel="noopener" href="https://twitter.com/ishowta"><img class="logo"
+          src="./image/logo/twitter.png" alt="twitter" /></a>
+      <a target="_blank" rel="noopener" href="https://scrapbox.io/ishowta"><img class="logo"
+          src="./image/logo/scrapbox.png" alt="scrapbox" /></a>
+      <a target="_blank" rel="noopener" href="https://www.instagram.com/lwatachan"><img class="logo"
+          src="./image/logo/instagram.png" alt="instagram" /></a>
+    </fieldset>
+  </center>
+  <div class="ovbody">
+    <img id="waterroad" src="image/waterroad.png" alt="background">
+    <div class="gif-world-wrapper">
+      <canvas id="gif-world"></canvas>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<style>
+  .ovbody {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  body {
+    overflow: hidden;
+    background-image: url(../image/background_sky.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+  }
+
+  fieldset {
+    font-size: 24px;
+    font-family: serif;
+    z-index: 5;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    width: 700px;
+    padding: 16px 16px 8px 16px;
+    border: 0;
+    margin: auto;
+    margin-top: -84px;
+    margin-left: -300px;
+  }
+
+
+  #waterroad {
+    z-index: 4;
+    width: 1920px;
+    height: 480px;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    margin-left: -960px;
+  }
+
+  .gif-world-wrapper {
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+
+  .icon {
+    border-radius: 50%;
+  }
+
+  .logo {
+    width: 10%;
+    filter: drop-shadow(3px 3px 2px #3c3c3c82);
+  }
+</style>
