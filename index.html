@@ -18,9 +18,14 @@
 </head>
 
 <body>
-  <center role="main">
+    <div id="header"></div>
+    <center role="main">
     <fieldset>
-      <img class="icon" src="./image/icon.webp" alt="icon"></img>
+      <img class="icon" src="./image/icon2.png" alt="icon"></img>
+      <div class="profile">
+	      生活手段：フロントエンドエンジニア<br />
+	      好きなもの：ツール制作・アーキテクチャ・デザイン・エモ・論理・楽しいこと<br />
+      </div>
       <div>
         <a target="_blank" rel="noopener" href="mailto:ishowta@gmail.com"><img class="logo" src="./image/logo/email.png"
             alt="email" /></a>
@@ -41,6 +46,7 @@
       <canvas id="gif-world"></canvas>
     </div>
   </div>
+  <div id="footer"></div>
 </body>
 
 </html>
@@ -65,20 +71,21 @@
   fieldset {
     display: flex;
     flex-direction:column;
-    align-items: center;
+    align-items: flex-end;
     z-index: 5;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     position: absolute;
-    left: 50%;
-    top: 30%;
+    right: 20px;
+    bottom: 20px;
     width: 700px;
     padding: 16px 16px 8px 16px;
     border: 0;
     margin: auto;
-    margin-top: -84px;
-    margin-left: -350px;
+    /* margin-top: -84px;
+    margin-left: -350px; */
+    gap: 20px;
   }
 
 
@@ -95,6 +102,7 @@
     left: 50%;
     bottom: 0%;
     margin-left: -960px;
+    opacity: 0.9;
   }
 
   .gif-world-wrapper {
@@ -104,15 +112,46 @@
     height: 100%;
   }
 
+  .profile {
+    /* font-family: 游ゴシック;
+    font-weight: 500; */
+	  text-align: left;
+  }
+
   .icon {
     width:267px;
     height:267px;
     border-radius: 50%;
+    filter: drop-shadow(3px 3px 2px #3c3c3c82);
+    /* background-color: rgb(255 255 255 / 50%);
+    padding: 6px; */
+    border-width: 2px;
+    border-color: #000;
+    border-style: solid;
   }
 
   .logo {
     width:65px;
     height:65px;
     filter: drop-shadow(3px 3px 2px #3c3c3c82);
+    /* filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.1)); */
   }
+
+  /* #header {
+    height: 100px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+    background-color: #000;
+  }
+
+  #footer {
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    z-index: 10;
+    background-color: #000;
+  } */
 </style>
